@@ -1,13 +1,41 @@
 import React, { Component } from 'react'
+import RenderGame from './components/RenderGame'
+import WelcomePage from './components/WelcomePage'
 
-export class App extends Component {
+class App extends Component {
+  state = {
+    playerName: 'player',
+    computerChoice: null,
+    playerChoice: null,
+    outcome: null,
+    computerScore: 0,
+    playerScore: 0,
+    welcomePage: true
+  }
+
+
+
+
+
+
   render() {
+    let rendering
+    if (this.state.welcomePage) { 
+      rendering = (
+        <>
+        <WelcomePage onClickHandler={() => this.setState({ welcomePage: false })} />
+        </>
+      )
+    } else {
+      rendering = (
+        <>
+        <RenderGame />
+        </>
+      )
+    }
     return (
       <div>
-        <button id="play">Play</button>
-        <button id="rock-weapon">Rock</button>
-        <p id="players-weapon">Rock is your choice</p>
-
+        {rendering}
       </div>
     )
   }
