@@ -1,10 +1,17 @@
 import React from 'react'
 
-const RenderGame = () => {
+const RenderGame = (selectionHandler, game) => {
   return (
-    <div id="the-game">
-      THE GAME
-    </div>
+    <>
+      <button onClick={selectionHandler} name="Rock">Rock</button>
+      <button onClick={selectionHandler} name="Paper">Paper</button>
+      <button onClick={selectionHandler} name="Scissors">Scissors</button>
+
+      <button onClick={game} name="Scissors">Start Game</button>
+
+      <br/>
+      <br/>
+    </>
   )
 }
 

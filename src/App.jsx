@@ -13,6 +13,24 @@ class App extends Component {
     welcomePage: true
   }
 
+  selectionHandler = e => {debugger
+    this.setState({ playerChoice: e.target.name  });
+    
+  }
+
+  // game = () => {
+  //   debugger
+  // }
+
+
+
+
+  
+  // const = startGame = () => {
+  //   debugger
+  // }
+  
+
 
 
 
@@ -36,6 +54,7 @@ class App extends Component {
     return (
       <div>
         {rendering}
+        <RenderGame selectionHandler={this.selectionHandler} game={this.game} />
       </div>
     )
   }
