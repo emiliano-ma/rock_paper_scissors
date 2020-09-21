@@ -11,8 +11,6 @@ describe('player can interact with the interface', () => {
     cy.get('#the-game').should('contain', 'THE GAME');
   });
 
-
-
   xit('player sees the chosen weapon', () => {
     cy.get('#players-weapon').should('contain', 'Rock is your choice');
   });

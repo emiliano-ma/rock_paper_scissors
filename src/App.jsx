@@ -4,7 +4,7 @@ import WelcomePage from "./components/WelcomePage";
 
 class App extends Component {
   state = {
-    playerName: "player",
+    playerName: "NoNamePlayer",
     computerChoice: null,
     playerChoice: '',
     outcome: null,
@@ -55,11 +55,15 @@ class App extends Component {
     return (
       <div>
         {this.state.welcomePage ? (
-          <WelcomePage onClickHandler= {() =>  this.setState({welcomePage: false})} />
+          <WelcomePage 
+            onClickHandler= {() =>  this.setState({welcomePage: false})} 
+            playerUpdater= {(e) =>  this.setState({playerName: e.target.value})} 
+          />
         ) : (
           <RenderGame 
             selectionHandler={this.selectionHandler} 
             onClickHandler= {() =>  this.setState({welcomePage: true})}
+            playerName={this.state.playerName}
           /> 
         )}
       </div>

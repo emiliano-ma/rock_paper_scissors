@@ -1,11 +1,12 @@
 
-describe('User can interact with the Welcome UI', () => {
+describe('Player can interact with the Welcome UI', () => {
   beforeEach(() => {
+    cy.visit("/");
     cy.get('#input-name').type('Emiliano');
     cy.get("#play").click();
   })
 
-  it('User can fill in a name and it gets displayed as players name in RenderGame', () => {
+  it('Player can fill in a name and it gets displayed as players name in RenderGame', () => {
     cy.get('#player-name').should('contain', 'Emiliano');
   });
 
@@ -13,7 +14,7 @@ describe('User can interact with the Welcome UI', () => {
     cy.get("#play").should("not.exist");
   });
 
-  it('User can go back to Welcome page', () => {
+  it('Player can go back to Welcome page', () => {
     cy.get('#back').click();
     cy.get("#play").should("exist");
   });
