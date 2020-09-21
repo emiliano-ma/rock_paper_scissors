@@ -1,4 +1,3 @@
-// Computer behaves as first person and treats user in the second person
 
 describe('player can interact with the interface', () => {
   beforeEach(() => {
