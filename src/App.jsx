@@ -5,18 +5,19 @@ import WelcomePage from "./components/WelcomePage";
 class App extends Component {
   state = {
     playerName: "NoNamePlayer",
-    computerChoice: null,
+    computerChoice: '',
     playerChoice: '',
-    outcome: null,
+    winner: '',
     computerScore: 0,
     playerScore: 0,
     welcomePage: true,
   };
 
+
   selectionHandler = async (e) => {
-    debugger
-    this.setState({ playerChoice: e.target.name });
-    // let playerChoice = e.target.name
+    // const playerChoice = e.target.id;
+    // const computerChoice = 
+    // // let playerChoice = e.target.name
     // let computerChoice = khdfdfhj
     // await playGame(playerChoice, )
 
@@ -29,29 +30,10 @@ class App extends Component {
 
   onClickHandler = () => {
     }
-  // game = () => {
-  //   debugger
-  // }
-
-  // const = startGame = () => {
-  //   debugger
-  // }
+ 
 
   render() {
-    // let rendering
-    // if (this.state.welcomePage) {
-    //   rendering = (
-    //     <>
-    //     <WelcomePage onClickHandler={this.setState({ welcomePage: false })} />
-    //     </>
-    //   )
-    // } else {
-    //   rendering = (
-    //     <>
-    //     <RenderGame />
-    //     </>
-    //   )
-    // }
+   
     return (
       <div>
         {this.state.welcomePage ? (
