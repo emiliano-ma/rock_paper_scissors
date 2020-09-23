@@ -1,8 +1,15 @@
-User story 1
+Requirements into User Stories:
+As a player
+In order to express my choice
+I need to be able to select rp o s
 
-as a player
-in order to challenge the computer 
-I need to be able to chose a weapon and expect the computer to chose one too.
+As a player
+In order to compete with the computer
+I'd need The computer to randomly choose 1
+
+As a player
+In order to see who the winner is
+I should see the result displayed on screen 
 
 
 -intention of the app

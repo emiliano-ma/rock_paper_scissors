@@ -7,7 +7,7 @@ class App extends Component {
     playerName: "NoNamePlayer",
     computerChoice: '',
     playerChoice: '',
-    winner: '',
+    outcome: '',
     computerScore: 0,
     playerScore: 0,
     welcomePage: true,
@@ -46,6 +46,11 @@ class App extends Component {
             selectionHandler={this.selectionHandler} 
             onClickHandler= {() =>  this.setState({welcomePage: true})}
             playerName={this.state.playerName}
+            playerChoice={this.state.playerChoice}
+            computerChoice={this.state.computerChoice}
+            outcome={this.state.outcome}
+            playerScore={this.state.playerScore}
+            computerScore={this.state.computerScore}
           /> 
         )}
       </div>

@@ -9,8 +9,26 @@ describe('Game logic works when computer choices Rock', () => {
     cy.get("#play").click();
   })
   
-  it('player choices rock', () => {
-    cy.get('#rock-').click()
-    cy.get('#players-choice').should('contain', 'Rock')
+  context ('player choices rock', () => {
+    beforeEach(() => {
+      cy.get('#rock-').click()
+    })
+    it('displays correct player choice', () => {
+      cy.get('#player-choice').should('contain', 'choise is: Rock')
+    })
+
+    it('displays correct computer choice', () => {
+      cy.get('#computer-choice').should('contain', 'choise is: Rock')
+    })
+
+    it('outcome is: it is a tie', () => {
+      cy.get('#outcome').should('contain', 'It is a tie')
+    })
+
+    it('the score is', () => {
+      cy.get('#playerScore').should('contain', '0')
+      cy.get('#computerScore').should('contain', '0')
+    })
   })
+  
 })
