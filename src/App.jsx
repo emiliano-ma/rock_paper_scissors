@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import RenderGame from "./components/RenderGame";
 import WelcomePage from "./components/WelcomePage";
 
+const choices = ['rock', 'paper', 'scissors']
+
 class App extends Component {
   state = {
     playerName: "NoNamePlayer",
@@ -13,23 +15,36 @@ class App extends Component {
     welcomePage: true,
   };
 
-
   selectionHandler = async (e) => {
-    // const playerChoice = e.target.id;
-    // const computerChoice = 
-    // // let playerChoice = e.target.name
-    // let computerChoice = khdfdfhj
-    // await playGame(playerChoice, )
-
+    const playerChoice = e.target.id;
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)]
+    await this.playGame(playerChoice, computerChoice)
 
     this.setState({
-      // playerChoice: jhajhda,
-      // computerChoice: jhsdkds
+      playerChoice: playerChoice,
+      computerChoice: computerChoice
     })
   };
 
-  onClickHandler = () => {
+  playGame = (playerChoice, computerChoice) => {
+    
+    if(playerChoice === computerChoice) {
+      this.setState({ outcome: `It is a tie` })
     }
+
+    else if (
+      (playerChoice === 'rock' && computerChoice === 'scissors') ||
+      (playerChoice === 'paper' && computerChoice === 'rock') ||
+      (playerChoice === 'scissors' && computerChoice === 'paper')
+    ) {
+      this.setState({ playerScore: this.state.playerScore + 1 })
+      this.setState({ outcome: `${this.state.playerName} wins` })
+      
+    } else {
+      this.setState({ computerScore: this.state.computerScore + 1 })
+      this.setState({ outcome: `Computer wins` })
+    }
+  }
  
 
   render() {

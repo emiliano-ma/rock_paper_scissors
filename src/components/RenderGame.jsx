@@ -20,7 +20,7 @@ const RenderGame = ({
       <button onClick={selectionHandler} id="scissors-" name="Scissors"><span id="scissors" aria-label="jsx-a11y/accessible-emo" role="img">✌</span></button>
       <Button id="back" onClick={onClickHandler}>Back to edit Name</Button>
       <br/>
-      <p id="player-choice">{playerName} choise is: {playerChoice}</p>
+      <p id="player-choice">{playerName}'s' choise is: {playerChoice}</p>
       <p id="computer-choice">Computer choise is: {computerChoice}</p>
       <p id="outcome">{outcome}</p>
       <p id="playerScore">{playerName}: {playerScore}</p>

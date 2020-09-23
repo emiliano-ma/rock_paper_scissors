@@ -14,11 +14,11 @@ describe('Game logic works when computer choices Rock', () => {
       cy.get('#rock-').click()
     })
     it('displays correct player choice', () => {
-      cy.get('#player-choice').should('contain', 'choise is: Rock')
+      cy.get('#player-choice').should('contain', 'choise is: rock')
     })
 
     it('displays correct computer choice', () => {
-      cy.get('#computer-choice').should('contain', 'choise is: Rock')
+      cy.get('#computer-choice').should('contain', 'choise is: rock')
     })
 
     it('outcome is: it is a tie', () => {
