@@ -13,7 +13,6 @@ describe("RenderGame", () => {
       onClickHandler={onClickHandler}
     />
   );
-  // .text()).toEqual(
   it("renders with playerName prop", () => {
     expect(wrapper.find("#player-name").text()).toEqual("Best of luck Emiliano!");
   });
