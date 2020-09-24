@@ -42,7 +42,7 @@ I should see the result displayed on screen
 
   
 
-- CI and CD is implemented.
+- CI and CD is implemented with Semaphore and Netlify.
 
   
   
