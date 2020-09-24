@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import RenderGame from "./components/RenderGame";
 import WelcomePage from "./components/WelcomePage";
 
-const choices = ['rock', 'paper', 'scissors']
+const choices = ['Rock', 'Paper', 'Scissors']
 
 class App extends Component {
   state = {
@@ -33,16 +33,16 @@ class App extends Component {
     }
 
     else if (
-      (playerChoice === 'rock' && computerChoice === 'scissors') ||
-      (playerChoice === 'paper' && computerChoice === 'rock') ||
-      (playerChoice === 'scissors' && computerChoice === 'paper')
+      (playerChoice === 'Rock' && computerChoice === 'Scissors') ||
+      (playerChoice === 'Paper' && computerChoice === 'Rock') ||
+      (playerChoice === 'Scissors' && computerChoice === 'Paper')
     ) {
       this.setState({ playerScore: this.state.playerScore + 1 })
-      this.setState({ outcome: `${this.state.playerName} wins` })
+      this.setState({ outcome: `${this.state.playerName} wins!` })
       
     } else {
       this.setState({ computerScore: this.state.computerScore + 1 })
-      this.setState({ outcome: `Computer wins` })
+      this.setState({ outcome: `Computer wins!` })
     }
   }
  

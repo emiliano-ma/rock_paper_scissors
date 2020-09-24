@@ -11,9 +11,9 @@ describe('player can interact with Game UI', () => {
   });
 
   it('player have rock, paper and scissors to choose from', () => {
-    cy.get('#rock').should('exist');
-    cy.get('#paper').should('exist');
-    cy.get('#scissors').should('exist');
+    cy.get('#Rock').should('exist');
+    cy.get('#Paper').should('exist');
+    cy.get('#Scissors').should('exist');
   });
 
   xit('player sees the chosen weapon', () => {
@@ -25,7 +25,7 @@ describe('player can interact with Game UI', () => {
   });
 
   xit('play again button displays once the round is over', () => {
-    cy.get('#rock').click();
+    cy.get('#Rock').click();
     cy.get('#play-again').should('be.visible');
   });
 

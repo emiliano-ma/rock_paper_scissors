@@ -14,3 +14,7 @@
   min-width: 80vw;
   align-self: baseline;
 }
+
+.emoji {
+  cursor: pointer;
+}
