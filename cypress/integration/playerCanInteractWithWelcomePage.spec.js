@@ -1,4 +1,3 @@
-
 describe('Player can interact with the Welcome UI', () => {
   beforeEach(() => {
     cy.visit("/");

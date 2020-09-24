@@ -17,13 +17,12 @@ describe("RenderGame", () => {
     expect(wrapper.find("#player-name").text()).toEqual("Best of luck Emiliano!");
   });
 
-
   it("on click the selectionHandler is being called", () => {
-    wrapper.find("#rock-").simulate("click");
+    wrapper.find("#Rock").simulate("click");
     expect(selectionHandler).toHaveBeenCalled();
-    wrapper.find("#paper-").simulate("click");
+    wrapper.find("#Paper").simulate("click");
     expect(selectionHandler).toHaveBeenCalled();
-    wrapper.find("#scissors-").simulate("click");
+    wrapper.find("#Scissors").simulate("click");
     expect(selectionHandler).toHaveBeenCalled();
   });
 

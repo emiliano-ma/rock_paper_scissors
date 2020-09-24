@@ -1,8 +1,8 @@
 describe('Game logic works when computer choices Rock', () => {
   beforeEach(() => {
     cy.visit('/', {
-      onBeforeLoad: (object) => {
-        cy.stub(object.Math, 'floor').returns(0);
+      onBeforeLoad: (selectionHandler) => {
+        cy.stub(selectionHandler.Math, 'floor').returns(0);
       }
     })
     cy.get('#input-name').type('Emiliano');

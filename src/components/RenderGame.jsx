@@ -18,8 +18,6 @@ const RenderGame = ({
       <span onClick={selectionHandler} className="emoji" id="Rock" aria-label="jsx-a11y/accessible-emo" role="img">✊</span>
       <span onClick={selectionHandler} className="emoji" id="Paper" aria-label="jsx-a11y/accessible-emo" role="img">✋</span>
       <span onClick={selectionHandler} className="emoji" id="Scissors" aria-label="jsx-a11y/accessible-emo" role="img">✌</span>
-      {/* <span id="Paper" aria-label="jsx-a11y/accessible-emo" role="img">✋</span>
-      <button onClick={selectionHandler} id="scissors-" name="Scissors"><span id="Scissors" aria-label="jsx-a11y/accessible-emo" role="img">✌</span></button> */}
       <Button id="back" onClick={onClickHandler}>Back to edit Name</Button>
       <br/>
       <p id="player-choice">{playerName}'s' choise is: {playerChoice}</p>

@@ -12,6 +12,7 @@ describe("RenderGame", () => {
       onClickHandler={onClickHandler}
     />
   );
+  
   it("on click the playerUpdater is being called", () => {
     wrapper.find("#input-name").simulate("change");
     expect(playerUpdater).toHaveBeenCalled();

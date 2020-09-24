@@ -1,8 +1,8 @@
 describe('Game logic works when computer choices Scissors', () => {
   beforeEach(() => {
     cy.visit('/', {
-      onBeforeLoad: (object) => {
-        cy.stub(object.Math, 'floor').returns(2);
+      onBeforeLoad: (selectionHandler) => {
+        cy.stub(selectionHandler.Math, 'floor').returns(2);
       }
     })
     cy.get('#input-name').type('Emiliano');
