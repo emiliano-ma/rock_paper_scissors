@@ -3,7 +3,6 @@ import RenderGame from "./components/RenderGame";
 import WelcomePage from "./components/WelcomePage";
 
 const choices = ['Rock', 'Paper', 'Scissors']
-
 class App extends Component {
   state = {
     playerName: "NoNamePlayer",
@@ -30,25 +29,20 @@ class App extends Component {
     
     if(playerChoice === computerChoice) {
       this.setState({ outcome: `It is a tie` })
-    }
-
-    else if (
+    } else if (
       (playerChoice === 'Rock' && computerChoice === 'Scissors') ||
       (playerChoice === 'Paper' && computerChoice === 'Rock') ||
       (playerChoice === 'Scissors' && computerChoice === 'Paper')
     ) {
       this.setState({ playerScore: this.state.playerScore + 1 })
       this.setState({ outcome: `${this.state.playerName} wins!` })
-      
     } else {
       this.setState({ computerScore: this.state.computerScore + 1 })
       this.setState({ outcome: `Computer wins!` })
     }
   }
  
-
   render() {
-   
     return (
       <div>
         {this.state.welcomePage ? (

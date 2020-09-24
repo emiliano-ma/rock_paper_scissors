@@ -11,7 +11,6 @@ As a player
 In order to see who the winner is
 I should see the result displayed on screen 
 
-
 -intention of the app
 -how I built it
 -link to deployed application

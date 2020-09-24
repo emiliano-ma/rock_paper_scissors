@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from 'semantic-ui-react'
+import {  Label, Menu, Header } from 'semantic-ui-react'
+
 
 const RenderGame = ({
   selectionHandler, 
@@ -13,21 +14,62 @@ const RenderGame = ({
 }) => {
   return (
     <>
-      <p id="player-name">Best of luck {playerName}!</p>
-      <p>Now Go ahead and make your choice</p>
-      <span onClick={selectionHandler} className="emoji" id="Rock" aria-label="jsx-a11y/accessible-emo" role="img">✊</span>
-      <span onClick={selectionHandler} className="emoji" id="Paper" aria-label="jsx-a11y/accessible-emo" role="img">✋</span>
-      <span onClick={selectionHandler} className="emoji" id="Scissors" aria-label="jsx-a11y/accessible-emo" role="img">✌</span>
-      <Button id="back" onClick={onClickHandler}>Back to edit Name</Button>
-      <br/>
-      <p id="player-choice">{playerName}'s' choise is: {playerChoice}</p>
-      <p id="computer-choice">Computer choise is: {computerChoice}</p>
-      <p id="outcome">{outcome}</p>
-      <p id="playerScore">{playerName}: {playerScore}</p>
-      <p id="computerScore">Computer: {computerScore}</p>
+      <Menu size='massive'>
+        <Menu.Item inverted header>Best of luck {playerName}!</Menu.Item>
+        <Menu.Item id="back" onClick={onClickHandler}>Edit Name</Menu.Item>
+      </Menu>
+      {/* <p id="player-name">Best of luck {playerName}!</p> */}
 
+      <div className="divs">
+        <Menu inverted size='massive' vertical>
+          <Menu.Item>
+            <Label id="playerScore" color='green'>{playerScore}</Label>
+            {playerName} Score
+          </Menu.Item>
+        </Menu>
+        <Menu inverted size='massive' vertical>
+          <Menu.Item>
+            <Label id="computerScore" color='red'>{computerScore}</Label>
+            Computer Score
+          </Menu.Item>
+        </Menu>
+     
+      </div>
+
+      <div className="divs">
+        <Header as='h3'>Now Go ahead and make your choice!</Header>
+      </div>
+
+      <div className="choices">
+        <span onClick={selectionHandler} className="emoji" id="Rock" aria-label="jsx-a11y/accessible-emo" role="img">✊</span>
+        <span onClick={selectionHandler} className="emoji" id="Paper" aria-label="jsx-a11y/accessible-emo" role="img">✋</span>
+        <span onClick={selectionHandler} className="emoji" id="Scissors" aria-label="jsx-a11y/accessible-emo" role="img">✌</span>
+      </div>
+      
+      <br/>
+
+      <div className="divs">
+        <Menu size='massive' >
+          <Menu.Item id="player-choice">
+          {playerName}'s' choise is: {playerChoice}
+          </Menu.Item>
+        </Menu>
+        <Menu size='massive' >
+          <Menu.Item id="computer-choice">
+          Computer choise is: {computerChoice}
+          </Menu.Item>
+        </Menu>
+      
+      </div>
+      <br/>
+      <br/>
+      <div className="divs">
+        <Header id="outcome" as='h2'>{outcome}</Header>
+      </div>
     </>
   )
 }
 
 export default RenderGame
+
+

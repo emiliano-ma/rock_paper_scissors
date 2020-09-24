@@ -9,12 +9,35 @@
   align-content: space-between;
 }
 
-
 .grid-child {
-  min-width: 80vw;
-  align-self: baseline;
+  min-width: 60vw;
+  align-self: start;
+}
+
+.choices {
+  display: flex;
+  padding: 7em;
+  justify-content: center;
+}
+
+.divs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  margin-top: 50px;
+}
+
+.baseline {
+  align-items: baseline;
 }
 
 .emoji {
   cursor: pointer;
+  font-size: 7em;
+  padding: 5%;
+  transition: 100ms;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
 }
