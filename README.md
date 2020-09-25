@@ -40,7 +40,7 @@ I should see the result displayed on screen
 
   ---
 
-**Focused on delivering a MVP doable in the given amount of time (2 weeks, limited availability).**
+**Focus was on delivering a MVP based on the acceptance tests.**
 
   
 
