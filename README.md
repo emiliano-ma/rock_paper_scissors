@@ -10,8 +10,8 @@ In the context of a tech interview simulation I was assigned to build a rock-pap
 
   **The only requirement is to comply with the game rules:**
 
-Rock vs Paper -> Paper wins; 
-Rock vs Scissors -> Rock wins; 
+Rock vs Paper -> Paper wins; <br>
+Rock vs Scissors -> Rock wins; <br>
 Paper vs Scissors -> Scissors wins
 
  
