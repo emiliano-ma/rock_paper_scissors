@@ -10,7 +10,9 @@ In the context of a tech interview simulation I was assigned to build a rock-pap
 
   **The only requirement is to comply with the game rules:**
 
-Rock vs Paper -> Paper wins; Rock vs Scissors -> Rock wins; Paper vs Scissors -> Scissors wins
+Rock vs Paper -> Paper wins; 
+Rock vs Scissors -> Rock wins; 
+Paper vs Scissors -> Scissors wins
 
  
 **TDD and BDD approach starting with three user stories:**
@@ -26,7 +28,7 @@ As a player
 
 In order to compete with the computer
 
-I'd need The computer to randomly choose 1
+I'd need The computer to randomly pick 1 of the choices
 
   ---
 
@@ -87,11 +89,10 @@ I should see the result displayed on screen
 
 - [Examples stubbing window](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/stubbing-spying__window)
 
-  
-  
-  
 
-### Tech and packages
+
+
+### Tools and packages
 
 - React
 - Cypress for acceptance tests.

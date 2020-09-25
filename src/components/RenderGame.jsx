@@ -15,7 +15,7 @@ const RenderGame = ({
   return (
     <>
       <Menu size='massive'>
-        <Menu.Item inverted header>Best of luck {playerName}!</Menu.Item>
+        <Menu.Item id="player-name" inverted header>Best of luck {playerName}!</Menu.Item>
         <Menu.Item id="back" onClick={onClickHandler}>Edit Name</Menu.Item>
       </Menu>
       {/* <p id="player-name">Best of luck {playerName}!</p> */}
