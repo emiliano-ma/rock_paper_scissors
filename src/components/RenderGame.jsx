@@ -15,19 +15,18 @@ const RenderGame = ({
   return (
     <>
       <Menu size='massive'>
-        <Menu.Item id="player-name" inverted header>Best of luck {playerName}!</Menu.Item>
+        <Menu.Item id="player-name" inverted="true" header>Best of luck {playerName}!</Menu.Item>
         <Menu.Item id="back" onClick={onClickHandler}>Edit Name</Menu.Item>
       </Menu>
-      {/* <p id="player-name">Best of luck {playerName}!</p> */}
 
       <div className="divs">
-        <Menu inverted size='massive' vertical>
+        <Menu inverted={true} size='massive' vertical>
           <Menu.Item>
             <Label id="playerScore" color='green'>{playerScore}</Label>
             {playerName} Score
           </Menu.Item>
         </Menu>
-        <Menu inverted size='massive' vertical>
+        <Menu inverted={true} size='massive' vertical>
           <Menu.Item>
             <Label id="computerScore" color='red'>{computerScore}</Label>
             Computer Score

@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, render } from "enzyme";
 
 import RenderGame from "../components/RenderGame";
 
@@ -8,13 +8,18 @@ describe("RenderGame", () => {
   const onClickHandler = jest.fn();
   const wrapper = shallow(
     <RenderGame
-      playerName="Emiliano"
       selectionHandler={selectionHandler}
       onClickHandler={onClickHandler}
     />
   );
+  const wrapper1 = render(
+    <RenderGame
+      playerName="Emiliano"
+    />
+  );
+  
   it("renders with playerName prop", () => {
-    expect(wrapper.find("#player-name").text()).toEqual("Best of luck Emiliano!");
+    expect(wrapper1.find("#player-name").text()).toEqual("Best of luck Emiliano!");
   });
 
   it("on click the selectionHandler is being called", () => {
