@@ -12,14 +12,12 @@ describe("RenderGame", () => {
       onClickHandler={onClickHandler}
     />
   );
-  const wrapper1 = render(
-    <RenderGame
-      playerName="Emiliano"
-    />
-  );
-  
+  const wrapper1 = render(<RenderGame playerName="Emiliano" />);
+
   it("renders with playerName prop", () => {
-    expect(wrapper1.find("#player-name").text()).toEqual("Best of luck Emiliano!");
+    expect(wrapper1.find("#player-name").text()).toEqual(
+      "Best of luck Emiliano!"
+    );
   });
 
   it("on click the selectionHandler is being called", () => {
