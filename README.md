@@ -6,7 +6,7 @@
 
 ### Intention of the app
 
-In the context of a tech interview simulation I was assigned to build a rock-paper-scissors game with absolute freedom to choose how I wanted to do it. From selecting the tools up to the UI.
+In the context of a tech interview simulation I was assigned to build a rock-paper-scissors game with absolute freedom to choose how I wanted to do it. From selecting the tools up to the UI. This challenge runs between weeks 4 - 6 of the bootcamp as a side project. 
 
   **The only requirement is to comply with the game rules:**
 
