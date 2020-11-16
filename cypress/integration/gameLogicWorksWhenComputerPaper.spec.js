@@ -1,8 +1,8 @@
 describe('Game logic works when computer choices Paper', () => {
   beforeEach(() => {
     cy.visit('/', {
-      onBeforeLoad: (selectionHandler) => {
-        cy.stub(selectionHandler.Math, 'floor').returns(1);
+      onBeforeLoad: (window) => {
+        cy.stub(window.Math, 'floor').returns(1);
       }
     })
     cy.get('#input-name').type('Emiliano');
